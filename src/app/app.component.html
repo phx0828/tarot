@@ -1,53 +1,54 @@
 <div class="main">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="wrap col-12 col-md-8 p-0">
+  <div class="main-content">
+    <div class="container" style="display: flex; flex: 1;">
+      <div class="row justify-content-center"  style="display: flex; flex: 1;">
+        <div class="wrap col-12 col-md-8 p-0">
+          <div class="container g-0 flex-1">
 
-        <div class="container g-0">
-
-          <div class="row g-0 mb-3">
-            <div class="col-12">
-              <div class="title-banner col-12">
-                <div class="title">
-                  <h1>塔羅抽牌網站</h1>
+            <div class="row g-0 mb-3">
+              <div class="col-12">
+                <div class="title-banner col-12">
+                  <div class="title">
+                    <h1>塔羅抽牌網站</h1>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row g-0">
-            <form class="form">
-              <div class="container">
-                <div class="row mb-4">
-                  <div class="col-12 col-md-8 mb-2 mb-md-none">
-                    <select class="form-select" name="spreads" id="spreads" [(ngModel)]="spread">
-                      <option value="0" hidden="true">請選擇牌數</option>
-                      <option value="1">1張</option>
-                      <option value="3">3張</option>
-                      <option value="4">4張</option>
-                      <option value="5">5張</option>
-                      <option value="7">7張</option>
-                      <option value="9">9張</option>
-                    </select>
+            <div class="row g-0">
+              <form class="form">
+                <div class="container">
+                  <div class="row mb-4">
+                    <div class="col-12 col-md-8 mb-2 mb-md-none">
+                      <select class="form-select" name="spreads" id="spreads" [(ngModel)]="spread">
+                        <option value="0" hidden="true">請選擇牌數</option>
+                        <option value="1">1張</option>
+                        <option value="3">3張</option>
+                        <option value="4">4張</option>
+                        <option value="5">5張</option>
+                        <option value="7">7張</option>
+                        <option value="9">9張</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <button class="btn" (click)="draw()" [disabled]="spread == 0">抽牌</button>
+                    </div>
                   </div>
-                  <div class="col-12 col-md-4">
-                    <button class="btn" (click)="draw()" [disabled]="spread == 0">抽牌</button>
+                  <div class="row justify-content-center">
+                    <div class="card-size col-4 col-lg-2" *ngFor="let card of cardsRes">
+                      <app-card-info [cardNum]="card"></app-card-info>
+                    </div>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="card-size col-4 col-lg-2" *ngFor="let card of cardsRes">
-                    <app-card-info [cardNum]="card"></app-card-info>
-                  </div>
-                </div>
-              </div>
 
-            </form>
+              </form>
+            </div>
           </div>
+
         </div>
-
       </div>
     </div>
   </div>
-
+  <app-footer></app-footer>
 </div>
 

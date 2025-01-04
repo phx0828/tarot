@@ -3,12 +3,21 @@
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;  /* 使內容垂直排列 */
+  flex: 1;                 /* 使 main-content 佔據剩餘空間 */
+  width: 100%;             /* 保持佈局寬度 */
 }
 
 .wrap {
   background-color: #fff;
-  min-height: 100vh;
+  display: flex;
+  float: 1;
+  width: 100%;
 }
 
 .title-banner {
