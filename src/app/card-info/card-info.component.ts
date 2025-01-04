@@ -11,7 +11,7 @@ export class CardInfoComponent {
   public cardImgUrl: string = '';
 
   ngOnInit(): void {
-     this.cardImgUrl = "../../assets/images/" + this.cardNum + ".jpg";
+     this.cardImgUrl = "/tarots/assets/images/" + this.cardNum + ".jpg";
   }
 }
 
