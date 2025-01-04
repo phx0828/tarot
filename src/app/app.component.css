@@ -1,0 +1,65 @@
+.main {
+  background-color: #d6d6d6;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.title-banner {
+  display: flex;
+  min-height: 250px;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/images/logo_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  padding: 50px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+@media screen and (max-width: 576px) {
+  .title-banner {
+    min-height: 150px;
+  }
+
+  .title {
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+  }
+}
+
+h1 {
+  font-weight: 900;
+  margin: 0;
+}
+
+.btn {
+  min-width: 100%;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #ff9100;
+  background-color: #ff9100;
+}
+
+.btn:hover {
+  color: #ff9100;;
+  background-color: rgb(255, 255, 255);
+}
+
+form {
+  width: 100%;
+}
+
+.card-size {
+  padding: 5px;
+}
