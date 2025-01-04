@@ -11,7 +11,7 @@ export class AppComponent {
 
   public draw() {
     this.cardsRes = [];
-    while (this.cardsRes.length < 5) {
+    while (this.cardsRes.length < this.spread) {
       let newNum = Math.floor(Math.random() * 78) + 1;
       !this.cardsRes.includes(newNum) ? this.cardsRes.push(newNum) : null;
     }
