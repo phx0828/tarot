@@ -7,11 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class CardInfoComponent {
   @Input()
-  public cardNum: number = 0;
+  public cardInfo: {cardNum: number, reverse: number} = {} as any;
   public cardImgUrl: string = '';
+  public reverse: boolean = false;
 
   ngOnInit(): void {
-    this.cardImgUrl = "assets/images/" + this.cardNum + ".jpg";
+    this.cardInfo.reverse === 1 ? this.reverse = true : this.reverse = false;
+    this.cardImgUrl = "assets/images/" + this.cardInfo.cardNum + ".jpg";
   }
 }
 

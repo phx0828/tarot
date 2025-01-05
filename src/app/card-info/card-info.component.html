@@ -1,4 +1,8 @@
-<div class="card">
-  <img [src]="cardImgUrl" alt="">
+<div class="cardinfo-box">
+  <div class="card-img">
+    <img [src]="cardImgUrl" alt="" [ngClass]="{reverse: reverse}">
+  </div>
+  <div class="card-text">{{cardInfo.cardNum}}（{{reverse ? '逆' : '正'}}）</div>
 </div>
+
 

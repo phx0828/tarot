@@ -34,14 +34,15 @@
                       <button class="btn" (click)="draw()" [disabled]="spread == 0">抽牌</button>
                     </div>
                   </div>
-                  <div class="row justify-content-center">
-                    <div class="card-size col-4 col-lg-2" *ngFor="let card of cardsRes">
-                      <app-card-info [cardNum]="card"></app-card-info>
-                    </div>
-                  </div>
                 </div>
-
               </form>
+            </div>
+
+            <div class="row g-0 justify-content-center">
+              <div class="col-4 col-lg-2 p-2" *ngFor="let card of cardsRes">
+                <app-card-info [cardInfo]="card"></app-card-info>
+              </div>
+
             </div>
           </div>
 
